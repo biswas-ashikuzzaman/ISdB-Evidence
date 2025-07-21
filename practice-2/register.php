@@ -24,7 +24,12 @@
 <form method="post" enctype="multipart/form-data">
     Name: <input type="text" name="name" required><br><br>
     Email: <input type="email" name="email" required><br><br>
-    Position: <input type="text" name="position" required><br><br>
+     Position<select class="form-select mt-3" name="position" required>
+              <option selected disabled value="">Select Position</option>
+              <option value="jweb">Junior Web Developer</option>
+              <option value="sweb">Senior Web Developer</option>
+              <option value="pmanager">Project Manager</option>
+            </select> <br> <br>
     Password: <input type="password" name="password" required><br><br>
     Gender:
     <input type="radio" name="gender" value="Male" required> Male
@@ -117,8 +122,8 @@ if (file_exists($file_path)) {
         }
         echo "</table>";
 
-        // ✅ Add link to main register page
-        echo "<br><a href='register.html'>🔙 Go to Main Register Form</a>";
+        // Add link to main register page
+        echo "<br><a href='register.html'>Go to Main Register Form</a>";
     }
 }
 ?>
